@@ -1,0 +1,21 @@
+PDBORCL =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST =  oracle-db-cont)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = PDBORCL)
+    )
+  )
+
+CDBORCL =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST =  oracle-db-cont)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = cdborcl)
+    )
+  )
+
+LISTENER_CDBORCL =
+  (ADDRESS = (PROTOCOL = TCP)(HOST =  oracle-db-cont)(PORT = 1521))

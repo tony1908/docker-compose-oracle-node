@@ -1,0 +1,13 @@
+version: '3'
+services:
+  oracle-db-cont:
+    image: "wnameless/oracle-xe-11g:16.04"
+  web:
+    build: .
+    depends_on: 
+      - oracle-db-cont
+    ports:
+     - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: npm run start
